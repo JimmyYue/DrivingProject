@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="6EH-Bm-l8X" customClass="FirstTypeBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnW-0l-MmR">
+                    <rect key="frame" x="5" y="0.0" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="26U-pM-0LD"/>
+                        <constraint firstAttribute="height" constant="50" id="uLa-hG-iTH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="上一题" image="before">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <connections>
+                        <action selector="beforeBtnAction:" destination="6EH-Bm-l8X" eventType="touchUpInside" id="HiU-S8-2TN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aq2-Fm-KPK">
+                    <rect key="frame" x="309" y="0.0" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="HJ5-du-tzK"/>
+                        <constraint firstAttribute="height" constant="50" id="Kam-cu-t3U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="titleEdgeInsets" minX="-50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-100" maxY="0.0"/>
+                    <state key="normal" title="下一题" image="next">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <connections>
+                        <action selector="nextBtnAction:" destination="6EH-Bm-l8X" eventType="touchUpInside" id="zrZ-UT-95f"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qq-zX-EXq">
+                    <rect key="frame" x="132" y="0.0" width="150" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aWd-Is-SKP"/>
+                        <constraint firstAttribute="width" constant="150" id="qfz-wc-Q7i"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                    <state key="normal" title="1 / 100" image="page">
+                        <color key="titleColor" systemColor="labelColor"/>
+                    </state>
+                    <connections>
+                        <action selector="pageBtnAction:" destination="6EH-Bm-l8X" eventType="touchUpInside" id="Jjs-ty-XAj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="5Qq-zX-EXq" firstAttribute="top" secondItem="6EH-Bm-l8X" secondAttribute="top" id="B7R-mE-eTn"/>
+                <constraint firstItem="aq2-Fm-KPK" firstAttribute="top" secondItem="6EH-Bm-l8X" secondAttribute="top" id="DRe-6I-Pew"/>
+                <constraint firstItem="5Qq-zX-EXq" firstAttribute="centerX" secondItem="6EH-Bm-l8X" secondAttribute="centerX" id="Kz3-Px-r5m"/>
+                <constraint firstItem="rnW-0l-MmR" firstAttribute="leading" secondItem="6EH-Bm-l8X" secondAttribute="leading" constant="5" id="QNG-b6-kle"/>
+                <constraint firstAttribute="trailing" secondItem="aq2-Fm-KPK" secondAttribute="trailing" constant="5" id="RZK-jE-Ns6"/>
+                <constraint firstItem="rnW-0l-MmR" firstAttribute="top" secondItem="6EH-Bm-l8X" secondAttribute="top" id="Udo-0B-vtP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="pageBtn" destination="5Qq-zX-EXq" id="LBc-k5-j2z"/>
+            </connections>
+            <point key="canvasLocation" x="289.85507246376812" y="-71.986607142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="before" width="24" height="24"/>
+        <image name="next" width="24" height="24"/>
+        <image name="page" width="24" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

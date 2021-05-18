@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  DrivingProject
+//  SZPageControllerDemo
 //
-//  Created by JimmyYue on 2021/2/23.
+//  Created by zxc on 2017/5/14.
+//  Copyright © 2017年 StenpZ. All rights reserved.
 //
 
 #import "AppDelegate.h"
-
+#import "HybridNSURLProtocol.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,49 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [NSURLProtocol registerClass:[HybridNSURLProtocol class]];
+    
+    [[UIApplication sharedApplication]setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    [NSThread sleepForTimeInterval:2.5];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    HomeViewController *VC = [[HomeViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:VC];
+    
+    self.window.rootViewController = nav;
+    
     return YES;
+}
+
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+}
+
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+}
+
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+}
+
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+}
+
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 
@@ -36,7 +79,6 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
-
 #pragma mark - Core Data stack
 
 @synthesize persistentContainer = _persistentContainer;
@@ -45,7 +87,7 @@
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"DrivingProject"];
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Driving"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
                     // Replace this implementation with code to handle the error appropriately.
@@ -81,5 +123,6 @@
         abort();
     }
 }
+
 
 @end

@@ -1,0 +1,99 @@
+//
+//  YZYJ-Prefix.pch
+//  YZYJ
+//
+//  Created by lixiya on 11/6/14.
+//  Copyright (c) 2014 YZYJ. All rights reserved.
+//
+
+#ifndef YZYJ_YZYJ_Prefix_pch
+#define YZYJ_YZYJ_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+
+#ifdef __OBJC__
+
+#import "AppDelegate.h"
+
+#import <UIKit/UIKit.h>
+#import "UIhelpTools.h"
+#import "PageViewController.h"
+#import "UIColor+YHLHexString.h"
+#import "UIImage+Utility.h"
+#import "IsBlankString.h"
+#import "SVProgressHUD.h"
+#import "WebViewJavascriptBridge.h"
+
+#endif
+
+#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue]>=7
+
+#define IphoneHeight  [[UIScreen mainScreen] bounds].size.height
+#define IphoneWidth  [[UIScreen mainScreen] bounds].size.width
+#define CurVersion  [UIDevice currentDevice].systemVersion
+
+#define VIEW_WIDTH(view)  (view.frame.size.width)
+#define VIEW_HEIGHT(view)  (view.frame.size.height)
+
+#define DX_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_Is_iPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_Is_iPhoneXS ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_Is_iPhoneXS_MAX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_Is_iPhone12_Mini ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1080, 2340), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_Is_iPhone12 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1170, 2532), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_Is_iPhone12_ProMax ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1284, 2778), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define DX_IS_IPhoneX_All (DX_Is_iPhoneX || DX_Is_iPhoneXR || DX_Is_iPhoneXS || DX_Is_iPhoneXS_MAX || DX_Is_iPhone12_Mini || DX_Is_iPhone12 || DX_Is_iPhone12_ProMax)
+
+
+//颜色 快速根据RGB值创建UIColor:
+#define RGBColorMake(_R_,_G_,_B_,_alpha_) [UIColor colorWithRed:_R_/255.0f green:_G_/255.0f blue:_B_/255.0f alpha:_alpha_]
+#define setColor(a, b, c)               [UIColor colorWithRed:a/255.0f green:b/255.0f blue:c/255.0f alpha:1.0f]
+#define setColorWithAlpha(a, b, c, d)   [UIColor colorWithRed:a/255.0f green:b/255.0f blue:c/255.0f alpha:d];
+
+#define DicAll NSMutableDictionary *dic
+
+#define kDeviceWidth                    [UIScreen mainScreen].bounds.size.width  //屏幕的全部区域
+#define kDeviceHeight                   [UIScreen mainScreen].bounds.size.height  //屏幕的全部区域
+
+#define StatusRect [UIhelpTools getStatusBarHight]
+#define NavRect self.navigationController.navigationBar.frame.size.height
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define NSLog(...)
+#define debugMethod()
+#endif
+
+
+#define _APPDELEGATE  (AppDelegate *)[[UIApplication sharedApplication] delegate]
+#define _SceneDelegate  (SceneDelegate *)[[UIApplication sharedApplication] delegate];
+
+
+/********************************key*******************************/
+
+#define UMKey  @"5b59a3a1b27b0a05ae000295"
+#define MapKey  @"oMYhMplvW0m2U7iCSzRFWWZhvvi1l4NG"
+#define PGYKey  @"b094c985f11d73f5dad1b0b7c6da0abe"
+
+#define WeiXinKey  @""
+
+#define ImagePdfVideoFileUrl  @"http://hbgj.huanjingwuyou.com/hbgj-backend/file/read/"
+
+//  测试
+//#define API_BASE_URL(_URL_)   [@"http://192.168.0.51:8080/hbgj-backend/" stringByAppendingString:_URL_]
+
+//  线上
+#define API_BASE_URL(_URL_)   [@"http://hbgj.huanjingwuyou.com/hbgj-backend/" stringByAppendingString:_URL_]

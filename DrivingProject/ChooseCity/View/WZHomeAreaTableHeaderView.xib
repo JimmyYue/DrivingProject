@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WZHomeAreaTableHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="508" height="243"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9e-In-zV4">
+                    <rect key="frame" x="0.0" y="10" width="508" height="233"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前定位城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bJ-sG-3RS">
+                            <rect key="frame" x="15" y="17" width="74" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="e0z-Vr-SEk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ob-Lp-2Yt">
+                            <rect key="frame" x="15" y="47" width="108" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="108" id="2kP-gz-Gbd"/>
+                                <constraint firstAttribute="height" constant="34" id="mvK-w3-HkG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="定位中" image="home_location">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="locationBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="cZH-2l-gfq"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6O-qy-6fO">
+                            <rect key="frame" x="15" y="105" width="49.5" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="CIu-8X-EtB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OV-Sz-M7y">
+                            <rect key="frame" x="15" y="135" width="151" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="BH0-xe-VDy"/>
+                            </constraints>
+                            <state key="normal" title="北京">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Spp-UE-Z2q"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGc-eC-roH">
+                            <rect key="frame" x="176" y="135" width="151" height="34"/>
+                            <state key="normal" title="上海">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="BgK-6D-4se"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb3-lr-hv4">
+                            <rect key="frame" x="337" y="135" width="151" height="34"/>
+                            <state key="normal" title="广州">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="QH1-w5-2KC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZS-My-ing">
+                            <rect key="frame" x="15" y="179" width="151" height="34"/>
+                            <state key="normal" title="深圳">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="hom-Qf-kW6"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64A-Rt-dfv">
+                            <rect key="frame" x="176" y="179" width="151" height="34"/>
+                            <state key="normal" title="南京">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="GfB-Cy-hrU"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHX-5x-MPy">
+                            <rect key="frame" x="337" y="179" width="151" height="34"/>
+                            <state key="normal" title="苏州">
+                                <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="p6C-aV-pBq"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="jGc-eC-roH" firstAttribute="leading" secondItem="4OV-Sz-M7y" secondAttribute="trailing" constant="10" id="1xi-KC-Bi6"/>
+                        <constraint firstItem="jb3-lr-hv4" firstAttribute="height" secondItem="4OV-Sz-M7y" secondAttribute="height" id="3eq-d0-n8X"/>
+                        <constraint firstItem="eHX-5x-MPy" firstAttribute="width" secondItem="4OV-Sz-M7y" secondAttribute="width" id="5Fr-3R-3Vd"/>
+                        <constraint firstAttribute="trailing" secondItem="eHX-5x-MPy" secondAttribute="trailing" constant="20" id="5Hn-eX-R0q"/>
+                        <constraint firstItem="uZS-My-ing" firstAttribute="height" secondItem="4OV-Sz-M7y" secondAttribute="height" id="5PU-eg-0d9"/>
+                        <constraint firstItem="eHX-5x-MPy" firstAttribute="top" secondItem="jb3-lr-hv4" secondAttribute="bottom" constant="10" id="5gj-Qn-ea1"/>
+                        <constraint firstItem="9ob-Lp-2Yt" firstAttribute="top" secondItem="1bJ-sG-3RS" secondAttribute="bottom" constant="12" id="Ac8-yu-ZYp"/>
+                        <constraint firstAttribute="trailing" secondItem="jb3-lr-hv4" secondAttribute="trailing" constant="20" id="BBm-c7-wVw"/>
+                        <constraint firstItem="eHX-5x-MPy" firstAttribute="leading" secondItem="64A-Rt-dfv" secondAttribute="trailing" constant="10" id="DFH-1I-LrS"/>
+                        <constraint firstItem="9ob-Lp-2Yt" firstAttribute="leading" secondItem="Q9e-In-zV4" secondAttribute="leading" constant="15" id="EkS-Ol-kI2"/>
+                        <constraint firstItem="4OV-Sz-M7y" firstAttribute="top" secondItem="A6O-qy-6fO" secondAttribute="bottom" constant="12" id="HUQ-wX-dUx"/>
+                        <constraint firstItem="jb3-lr-hv4" firstAttribute="width" secondItem="4OV-Sz-M7y" secondAttribute="width" id="Hs5-0v-Osd"/>
+                        <constraint firstItem="64A-Rt-dfv" firstAttribute="leading" secondItem="uZS-My-ing" secondAttribute="trailing" constant="10" id="HvG-Ba-VAd"/>
+                        <constraint firstAttribute="bottom" secondItem="uZS-My-ing" secondAttribute="bottom" constant="20" id="NCg-48-d4f"/>
+                        <constraint firstItem="jGc-eC-roH" firstAttribute="height" secondItem="4OV-Sz-M7y" secondAttribute="height" id="OAd-r6-thG"/>
+                        <constraint firstItem="uZS-My-ing" firstAttribute="top" secondItem="4OV-Sz-M7y" secondAttribute="bottom" constant="10" id="P7e-qw-Wz5"/>
+                        <constraint firstItem="4OV-Sz-M7y" firstAttribute="leading" secondItem="Q9e-In-zV4" secondAttribute="leading" constant="15" id="USI-17-ewA"/>
+                        <constraint firstItem="64A-Rt-dfv" firstAttribute="top" secondItem="jGc-eC-roH" secondAttribute="bottom" constant="10" id="UmY-gP-Vyk"/>
+                        <constraint firstItem="jGc-eC-roH" firstAttribute="width" secondItem="4OV-Sz-M7y" secondAttribute="width" id="WnZ-1d-JTT"/>
+                        <constraint firstItem="uZS-My-ing" firstAttribute="width" secondItem="4OV-Sz-M7y" secondAttribute="width" id="XoE-aF-N21"/>
+                        <constraint firstItem="A6O-qy-6fO" firstAttribute="top" secondItem="9ob-Lp-2Yt" secondAttribute="bottom" constant="24" id="Zh8-8g-lY9"/>
+                        <constraint firstAttribute="bottom" secondItem="64A-Rt-dfv" secondAttribute="bottom" constant="20" id="avY-aN-d6X"/>
+                        <constraint firstAttribute="bottom" secondItem="eHX-5x-MPy" secondAttribute="bottom" constant="20" id="b57-PZ-wqG"/>
+                        <constraint firstItem="1bJ-sG-3RS" firstAttribute="top" secondItem="Q9e-In-zV4" secondAttribute="top" priority="999" constant="16" id="bSg-TN-dzy"/>
+                        <constraint firstItem="eHX-5x-MPy" firstAttribute="height" secondItem="4OV-Sz-M7y" secondAttribute="height" id="byA-3a-80y"/>
+                        <constraint firstItem="64A-Rt-dfv" firstAttribute="width" secondItem="4OV-Sz-M7y" secondAttribute="width" id="kHO-bM-Mme"/>
+                        <constraint firstItem="64A-Rt-dfv" firstAttribute="height" secondItem="4OV-Sz-M7y" secondAttribute="height" id="lRA-HW-dlc"/>
+                        <constraint firstItem="uZS-My-ing" firstAttribute="leading" secondItem="Q9e-In-zV4" secondAttribute="leading" constant="15" id="nhq-5m-0LF"/>
+                        <constraint firstItem="A6O-qy-6fO" firstAttribute="leading" secondItem="Q9e-In-zV4" secondAttribute="leading" constant="15" id="vfr-Hx-myW"/>
+                        <constraint firstItem="jb3-lr-hv4" firstAttribute="leading" secondItem="jGc-eC-roH" secondAttribute="trailing" constant="10" id="x3i-ie-D2u"/>
+                        <constraint firstItem="1bJ-sG-3RS" firstAttribute="leading" secondItem="Q9e-In-zV4" secondAttribute="leading" constant="15" id="zDS-7P-Y8m"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Q9e-In-zV4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4Ow-KO-B2h"/>
+                <constraint firstItem="Q9e-In-zV4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="EgZ-Da-FkX"/>
+                <constraint firstItem="Q9e-In-zV4" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Mg3-rt-sQP"/>
+                <constraint firstItem="Q9e-In-zV4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="fN8-53-hnb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="areaView" destination="Q9e-In-zV4" id="95B-1w-tbx"/>
+                <outlet property="locationBtn" destination="9ob-Lp-2Yt" id="IsP-v1-ipo"/>
+            </connections>
+            <point key="canvasLocation" x="-138" y="-189"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_location" width="16" height="16"/>
+    </resources>
+</document>
