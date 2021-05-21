@@ -104,9 +104,7 @@ static NSString *URLProtocolHandledKey = @"URLHasHandle";
 }
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error{
-    
     if (error) {
-        
         [self.client URLProtocol:self didFailWithError:error];
     }else{
         if ([task.currentRequest.URL.absoluteString hasSuffix:@"webp"]) {
@@ -120,7 +118,6 @@ static NSString *URLProtocolHandledKey = @"URLHasHandle";
         }
         [self.client URLProtocolDidFinishLoading:self];
     }
-    
 }
 
 

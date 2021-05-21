@@ -148,7 +148,6 @@
 }
 
 //- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-//
 //    [webView evaluateJavaScript:@"document.body.offsetWidth;" completionHandler:^(id Result, NSError * error) {
 //        NSString *widthStr = [NSString stringWithFormat:@"%@", Result];
 //        CGFloat width = widthStr.floatValue;

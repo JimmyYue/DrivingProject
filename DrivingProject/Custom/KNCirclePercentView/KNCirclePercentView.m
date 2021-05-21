@@ -163,7 +163,7 @@
     self.percentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addConstraints:@[centerHor, centerVer]];
     [self layoutIfNeeded];
-    self.percentLabel.text = [NSString stringWithFormat:@"%d%%", (int)self.percent];
+    self.percentLabel.text = [NSString stringWithFormat:@"%d", (int)self.percent];
 }
 
 - (void)startAnimation {

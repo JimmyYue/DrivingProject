@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "PersonalViewController.h"
 @interface HomeViewController ()
 
 @end
@@ -183,7 +183,19 @@
 }
 
 - (IBAction)userBtnAction:(id)sender {  // 我的
-    MyViewController *myVC = [[MyViewController alloc] init];
+    PersonalViewController *myVC = [[PersonalViewController alloc] init];
+    myVC.course = self.course;
+    myVC.car_type = self.car_type;
+    myVC.areacode = self.areacode;
+    NSString *type;
+    if ([_course isEqualToString:@"kemu1"]) {
+        type = @"科目一";
+    } else if ([_course isEqualToString:@"kemu4"]) {
+        type = @"科目四";
+    } else {
+        type = @"资格证";
+    }
+    myVC.carTypeName = [NSString stringWithFormat:@"%@-%@%@", self.carTypeName, self.carTypeNameS, type];
     [self.navigationController pushViewController:myVC animated:YES];
 }
 
@@ -246,7 +258,8 @@
 }
 
 - (IBAction)resultsBtnAction:(id)sender {
-    
+    SortingViewController *sortVC = [[SortingViewController alloc] init];
+    [self.navigationController pushViewController:sortVC animated:YES];
 }
 
 - (IBAction)simulationBtnAction:(id)sender {  // 模拟考试

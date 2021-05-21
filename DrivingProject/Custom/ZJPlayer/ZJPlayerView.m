@@ -72,7 +72,6 @@ NSString * const ZJPlayBeforeOperationNotification = @"ZJPlayBeforeOperation_Not
 -(void)setMovieUrl:(NSString *)movieUrl{
     _movieUrl = movieUrl;
     _playerManager.movieUrl = movieUrl;
-    
 }
 
 -(void)setPlaceholderImage:(NSString *)placeholderImage{

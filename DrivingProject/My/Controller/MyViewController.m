@@ -17,11 +17,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"我的";
+    self.title = @"设置";
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.myTopView = [[NSBundle mainBundle] loadNibNamed:@"MyTopView" owner:nil options:nil][0];
-    self.myTopView.frame = CGRectMake(0, StatusRect + NavRect, self.view.frame.size.width, self.view.frame.size.height - StatusRect - NavRect);
+    self.myTopView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:self.myTopView];
     
     self.myTopView.versionLabel.text = [self getTheCurrentVersion];
@@ -32,7 +32,6 @@
     
     [self.myTopView.policyBtn addTarget:self action:@selector(policyBtnAction) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.myTopView.feedbackBtn addTarget:self action:@selector(feedbackBtnAction) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)agreementBtnAction {
@@ -49,12 +48,6 @@
     [self.navigationController pushViewController:webVC animated:YES];
 }
 
-- (void)feedbackBtnAction {
-    WebViewController *webVC = [[WebViewController alloc] init];
-    webVC.titleS = @"用户反馈";
-    webVC.url = @"https://support.qq.com/products/300753";
-    [self.navigationController pushViewController:webVC animated:YES];
-}
 
 //  获取版本号
 - (NSString *)getTheCurrentVersion {

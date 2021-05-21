@@ -19,8 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) IBOutlet UIButton *policyBtn;
 
-@property (strong, nonatomic) IBOutlet UIButton *feedbackBtn;
-
 
 @end
 

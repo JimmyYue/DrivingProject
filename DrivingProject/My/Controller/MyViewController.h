@@ -8,10 +8,11 @@
 #import <UIKit/UIKit.h>
 #import "MyTopView.h"
 #import "WebViewController.h"
+#import "WhiteViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyViewController : PageViewController
+@interface MyViewController : WhiteViewController
 
 @property (nonatomic, strong) MyTopView *myTopView;
 

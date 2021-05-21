@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-DrivingProject/Pods-DrivingProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FCFileManager/FCFileManager.framework
+${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
+${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/WebViewJavascriptBridge_WebKit/WebViewJavascriptBridge_WebKit.framework
+${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework

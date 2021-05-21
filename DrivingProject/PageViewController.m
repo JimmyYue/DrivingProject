@@ -28,13 +28,12 @@
     [self.view addGestureRecognizer:tapGestureRecognizer];
     
     [self.navigationController setNavigationBarHidden:NO animated:animated];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"w.jpg"] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"b.jpg"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:18],
        NSForegroundColorAttributeName:[UIColor blackColor]}];
     
     [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];
-    
 }
 
 - (void)setTitle:(NSString *)str {
@@ -61,6 +60,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor colorWithHexString:@"f1f1f1"];
+    
 }
 
 /*

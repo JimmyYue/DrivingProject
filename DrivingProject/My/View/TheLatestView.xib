@@ -1,10 +1,96 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3sz-63-cut" customClass="TheLatestView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="671"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRe-fH-1cA">
+                    <rect key="frame" x="60" y="180.5" width="294" height="310"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_know" translatesAutoresizingMaskIntoConstraints="NO" id="pFC-q4-NoP">
+                            <rect key="frame" x="87" y="40" width="120" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="A10-mQ-CYN"/>
+                                <constraint firstAttribute="height" constant="100" id="zMH-aJ-PYU"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已是最新题库了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSy-qY-ir2">
+                            <rect key="frame" x="82.5" y="165" width="129" height="22"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="题库更新时间 : 2021-02-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yl-fr-6gP">
+                            <rect key="frame" x="70.5" y="202" width="153" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2L-rC-CUt">
+                            <rect key="frame" x="87" y="247" width="120" height="44"/>
+                            <color key="backgroundColor" red="0.15686274510000001" green="0.35686274509999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="F5b-37-NS4"/>
+                                <constraint firstAttribute="width" constant="120" id="XcX-TL-znL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <state key="normal" title="知道了"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="22"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="sureBtnAction:" destination="3sz-63-cut" eventType="touchUpInside" id="T1V-mw-3RD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="CSy-qY-ir2" firstAttribute="top" secondItem="pFC-q4-NoP" secondAttribute="bottom" constant="25" id="0pV-EP-1J6"/>
+                        <constraint firstItem="pFC-q4-NoP" firstAttribute="centerX" secondItem="rRe-fH-1cA" secondAttribute="centerX" id="0rA-HO-3eh"/>
+                        <constraint firstItem="pFC-q4-NoP" firstAttribute="top" secondItem="rRe-fH-1cA" secondAttribute="top" constant="40" id="3Cb-da-cU8"/>
+                        <constraint firstItem="S2L-rC-CUt" firstAttribute="centerX" secondItem="rRe-fH-1cA" secondAttribute="centerX" id="R27-zG-4OD"/>
+                        <constraint firstItem="8Yl-fr-6gP" firstAttribute="centerX" secondItem="rRe-fH-1cA" secondAttribute="centerX" id="SbM-Lu-b2l"/>
+                        <constraint firstItem="S2L-rC-CUt" firstAttribute="top" secondItem="8Yl-fr-6gP" secondAttribute="bottom" constant="30" id="ghD-Yc-qNx"/>
+                        <constraint firstItem="CSy-qY-ir2" firstAttribute="centerX" secondItem="rRe-fH-1cA" secondAttribute="centerX" id="gyb-Vt-VLg"/>
+                        <constraint firstAttribute="height" constant="310" id="r5e-7f-H6R"/>
+                        <constraint firstItem="8Yl-fr-6gP" firstAttribute="top" secondItem="CSy-qY-ir2" secondAttribute="bottom" constant="15" id="wf6-NW-8ad"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.2016075289979273" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="rRe-fH-1cA" secondAttribute="trailing" constant="60" id="duW-Vz-mMm"/>
+                <constraint firstItem="rRe-fH-1cA" firstAttribute="centerY" secondItem="3sz-63-cut" secondAttribute="centerY" id="fiP-mp-Lqi"/>
+                <constraint firstItem="rRe-fH-1cA" firstAttribute="leading" secondItem="3sz-63-cut" secondAttribute="leading" constant="60" id="zWR-hF-KHM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="banbenLabel" destination="8Yl-fr-6gP" id="EBw-Lt-IHR"/>
+            </connections>
+            <point key="canvasLocation" x="171.01449275362319" y="205.24553571428569"/>
+        </view>
     </objects>
+    <resources>
+        <image name="my_know" width="120" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TheLatestView : UIView
 
+@property (strong, nonatomic) IBOutlet UILabel *banbenLabel;
+
+- (IBAction)sureBtnAction:(id)sender;
+
 @end
 
 NS_ASSUME_NONNULL_END

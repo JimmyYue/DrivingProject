@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,23 +20,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l_top" translatesAutoresizingMaskIntoConstraints="NO" id="yBf-a6-rfm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="310.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l_launch" translatesAutoresizingMaskIntoConstraints="NO" id="hov-12-Con">
+                                <rect key="frame" x="-20" y="0.0" width="454" height="636"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="yBf-a6-rfm" secondAttribute="height" multiplier="72:54" id="cbJ-aI-8Pr"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l_middle" translatesAutoresizingMaskIntoConstraints="NO" id="QUH-DJ-1UI">
-                                <rect key="frame" x="87.5" y="495" width="239" height="79"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="239" id="tOf-ZT-Zn0"/>
+                                    <constraint firstAttribute="width" secondItem="hov-12-Con" secondAttribute="height" multiplier="207:290" id="eom-5L-Jgg"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROw-D0-Rgv">
-                                <rect key="frame" x="0.0" y="734" width="414" height="128"/>
+                                <rect key="frame" x="0.0" y="768" width="414" height="128"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="l_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="AKJ-jp-p15">
-                                        <rect key="frame" x="116.5" y="40" width="181" height="48"/>
+                                        <rect key="frame" x="116.5" y="41" width="181" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="181" id="ayd-wI-JHA"/>
                                         </constraints>
@@ -52,14 +46,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PHt-Qk-pAy" firstAttribute="top" secondItem="ROw-D0-Rgv" secondAttribute="bottom" id="98o-85-ZAM"/>
-                            <constraint firstItem="QUH-DJ-1UI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ahm-Jz-Oal"/>
-                            <constraint firstItem="yBf-a6-rfm" firstAttribute="top" secondItem="Rzn-8k-8q3" secondAttribute="bottom" id="K1l-YU-TKA"/>
-                            <constraint firstAttribute="trailing" secondItem="yBf-a6-rfm" secondAttribute="trailing" id="LQB-7R-Nh1"/>
+                            <constraint firstAttribute="bottom" secondItem="ROw-D0-Rgv" secondAttribute="bottom" id="98o-85-ZAM"/>
+                            <constraint firstItem="hov-12-Con" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9Ec-3O-ssT"/>
                             <constraint firstAttribute="trailing" secondItem="ROw-D0-Rgv" secondAttribute="trailing" id="P11-5f-Rwh"/>
                             <constraint firstItem="ROw-D0-Rgv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="PHt-eJ-bmL"/>
-                            <constraint firstItem="yBf-a6-rfm" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="k8o-nn-jx0"/>
-                            <constraint firstItem="QUH-DJ-1UI" firstAttribute="top" secondItem="yBf-a6-rfm" secondAttribute="bottom" constant="140.5" id="lP4-Dv-9Hh"/>
+                            <constraint firstAttribute="trailing" secondItem="hov-12-Con" secondAttribute="trailing" constant="-20" id="Zzp-1W-8KD"/>
+                            <constraint firstItem="hov-12-Con" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-20" id="lAm-Wq-aDj"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -69,9 +61,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="l_bottom" width="162" height="48"/>
-        <image name="l_middle" width="208" height="79"/>
-        <image name="l_top" width="360" height="270"/>
+        <image name="l_bottom" width="161" height="46"/>
+        <image name="l_launch" width="375" height="580"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

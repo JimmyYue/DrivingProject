@@ -9,6 +9,10 @@
 
 @implementation TheLatestView
 
+- (IBAction)sureBtnAction:(id)sender {
+    [self removeFromSuperview];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -16,5 +20,6 @@
     // Drawing code
 }
 */
+
 
 @end

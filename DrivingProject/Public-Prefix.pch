@@ -22,15 +22,19 @@
 #import <UIKit/UIKit.h>
 #import "UIhelpTools.h"
 #import "PageViewController.h"
+#import "WhiteViewController.h"
 #import "UIColor+YHLHexString.h"
 #import "UIImage+Utility.h"
 #import "IsBlankString.h"
 #import "SVProgressHUD.h"
 #import "WebViewJavascriptBridge.h"
+#import "XYCommon.h"
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
 
 #endif
 
-#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue]>=7
+#define IOS10 [[[UIDevice currentDevice] systemVersion]floatValue]>=10
 
 #define IphoneHeight  [[UIScreen mainScreen] bounds].size.height
 #define IphoneWidth  [[UIScreen mainScreen] bounds].size.width
@@ -84,16 +88,4 @@
 
 /********************************key*******************************/
 
-#define UMKey  @"5b59a3a1b27b0a05ae000295"
-#define MapKey  @"oMYhMplvW0m2U7iCSzRFWWZhvvi1l4NG"
-#define PGYKey  @"b094c985f11d73f5dad1b0b7c6da0abe"
-
-#define WeiXinKey  @""
-
-#define ImagePdfVideoFileUrl  @"http://hbgj.huanjingwuyou.com/hbgj-backend/file/read/"
-
-//  测试
-//#define API_BASE_URL(_URL_)   [@"http://192.168.0.51:8080/hbgj-backend/" stringByAppendingString:_URL_]
-
-//  线上
-#define API_BASE_URL(_URL_)   [@"http://hbgj.huanjingwuyou.com/hbgj-backend/" stringByAppendingString:_URL_]
+#define UMKey  @"603cbf776ee47d382b6b8b98"

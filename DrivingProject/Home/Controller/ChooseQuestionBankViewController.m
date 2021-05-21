@@ -51,7 +51,6 @@
     if ([IsBlankString isBlankString:_locationCity] == NO) {
         _cityLabel.text = _locationCity;
     }
-    
 }
 
 - (IBAction)cityBtnAction:(id)sender {
